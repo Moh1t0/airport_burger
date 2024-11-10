@@ -17,6 +17,9 @@ import static java.math.RoundingMode.CEILING;
 @Slf4j
 public class PayTerminal {
 
+    private static final long MILES = 1_000_000_000;
+    private static final BigDecimal INTEGRATION_NUMBER = BigDecimal.valueOf(95);
+
     /**
      * Оплата блюда
      * На вход стоимость заказа в рублях и валюта заказа.
@@ -48,7 +51,7 @@ public class PayTerminal {
      */
     @SneakyThrows
     private BigDecimal integrationWithBank() {
-        Thread.sleep(1_000_000_000);
-        return BigDecimal.valueOf(95);
+        Thread.sleep(MILES);
+        return (INTEGRATION_NUMBER);
     }
 }
